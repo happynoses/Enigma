@@ -116,6 +116,14 @@ public class Machine {
 			String letter = keyboard.nextLine();
 			keyboard.close();  
 			
+			String[] keylet = split(letter.toUpperCase());
+			keyboard.close();
+			StringBuffer result = new StringBuffer(); 
+			for(int i = 0; i <keylet.length; i++){
+				result.append(keylet[i]);
+			}
+			String key = new String(result.toString());
+			
 			String en = returnMes(reflector1(rotor2(rotor1(letter.toUpperCase())))); 
 			System.out.println(en);
 		}
